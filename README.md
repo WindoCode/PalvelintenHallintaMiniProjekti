@@ -1,4 +1,4 @@
-![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/d3974b7f-dcae-44be-8fed-8432c308759c)![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/d926f970-d708-48dd-ab43-a8d69559fb14)# PalvelintenHallintaMiniProjekti
+# PalvelintenHallintaMiniProjekti
 
 ## Työn tavoite
 - Tämän miniprojektin tavoitteena on luoda LAMP-stack SaltStackin ja Vagrantin avulla, jossa on yksi master-palvelin ja kaksi minion-palvelinta. Kertaan tällä projektilla kurssin aiheita ja hieman uutta.
