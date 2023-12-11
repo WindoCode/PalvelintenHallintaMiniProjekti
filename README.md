@@ -1,4 +1,4 @@
-![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/d926f970-d708-48dd-ab43-a8d69559fb14)# PalvelintenHallintaMiniProjekti
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/d3974b7f-dcae-44be-8fed-8432c308759c)![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/d926f970-d708-48dd-ab43-a8d69559fb14)# PalvelintenHallintaMiniProjekti
 
 ## Työn tavoite
 - Tämän miniprojektin tavoitteena on luoda LAMP-stack SaltStackin ja Vagrantin avulla, jossa on yksi master-palvelin ja kaksi minion-palvelinta. Kertaan tällä projektilla kurssin aiheita ja hieman uutta.
@@ -85,6 +85,12 @@ nginx:
       - pkg: nginx
 ```
 
+- Ajamme tämän tilan kaikilla minioneilla: `sudo salt ’*’ state.apply nginx`
+
+- Testataan vielä, avautuuko nginx-sivu selaimessamme, kokeillaan ensiksi t001-minionin sivua, osoitteessa http://192.168.12.102/ . Voimme sen todeta avautuneen! Kokeilin vielä t002:n sivustoa, joka toimi.
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/01176675-cd87-4e96-acae-83b5992242ff)
+
 ## Ohjelmistokieli: python3
 
 - Ensiksi teemme tilalle kansion : python. Teemme tämän /srv/salt-kansioon. `mkdir python`.
@@ -94,5 +100,15 @@ nginx:
 ![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/a0d466fe-8e6c-4959-9cb7-018f433909f6)
 
 - Luomme init.sls tiedoston, joka suorittaa tämän skriptin jokaisella minionilla: `
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/73676acc-02d9-4933-bac6-fee71a52e567)
+
+-Lopuksi ajamme tämän salt-tilan kaikilla minioneilla: `sudo salt '*' state.apply python
+
+- Testataan vielä minionilla: python3
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/c9b96a91-efa3-4484-ad3b-d296dc0e47f6)
+
+
+## 
+
 
 
