@@ -95,20 +95,54 @@ nginx:
 
 - Ensiksi teemme tilalle kansion : python. Teemme tämän /srv/salt-kansioon. `mkdir python`.
 - Seuraavaksi luomme python-kansioon skriptin: python.sh
-- Sisällytämme komennon: `sudo apt install python3` skriptiin.
+- Sisällytämme komennon: `sudo apt-get python3` skriptiin.
 
 ![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/a0d466fe-8e6c-4959-9cb7-018f433909f6)
 
 - Luomme init.sls tiedoston, joka suorittaa tämän skriptin jokaisella minionilla: `
+
 ![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/73676acc-02d9-4933-bac6-fee71a52e567)
 
--Lopuksi ajamme tämän salt-tilan kaikilla minioneilla: `sudo salt '*' state.apply python
+-Lopuksi ajamme tämän salt-tilan kaikilla minioneilla: `sudo salt '*' state.apply python`
 
 - Testataan vielä minionilla: python3
+
 ![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/c9b96a91-efa3-4484-ad3b-d296dc0e47f6)
 
 
-## 
+## Tietokanta: Postgresql
+
+- Luomme tilalle kansion: postgresql
+- Seuraavaksi kirjoitamme init.sls tiedoston
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/8885d097-716f-4112-8c61-944c7ded30cb)
+
+- init.sls tiedosto sisältää kaksi erillistä komentoa, joista ensimmäinen asentaa PostgreSQL:n. Toinen komento luo käyttäjän nimeltä vagrant ja tietokannan nimeltä vagrant. Komento suoritetaan postgres-käyttäjänä ja se tarkistaa, onko käyttäjää vagrant jo olemassa. Mikäli ne on jo olemassa, komento ei tee mitään.
+-  Lopulta voimme ajaa tämän tilan: `sudo salt '*' state.apply postgres`.
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/e1e8fdd9-b607-40a4-a7a6-81ce092b1166)
+
+- Komento toimii ja se toimii myös idempodentisti. Testataan vielä minioneilla, toimiiko postgres ja onko salt rakentanut uuden tietokannan: vagrant. Nämä saamme tietoon minionilla komennoilla `psql` sekä `\list`. Voimme todeta, että näin on tapahtunut!
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/7c0a0593-484d-4a77-a36c-7b5b1c30068e)
+
+## top.sls-tiedoston luominen
+
+- Koska en halua tehdä näitä kaikkia tiloja yksitellen, voimme luoda top.sls-tiedoston.
+- Luomme tiedoston `/srv/salt` - kansioon.
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/f3dc4244-96a6-4dcd-bece-b30ca9d1f1d1)
+
+- Voimme kansiossa ajaa nyt koko moduulin. `sudo salt '*' state.apply`.
+
+![image](https://github.com/WindoCode/PalvelintenHallintaMiniProjekti/assets/110290723/9bbe4e5e-cece-45ac-bdd1-9538fcbdf9e9)
+
+## Loppumietteet projektista ja kurssista
+
+- Opin
+
+
+
 
 
 
