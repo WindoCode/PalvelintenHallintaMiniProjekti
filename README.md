@@ -2,7 +2,7 @@
 
 ## Työn tavoite
 - Tämän miniprojektin tavoitteena on luoda LAMP-stack SaltStackin ja Vagrantin avulla, jossa on yksi master-palvelin ja kaksi minion-palvelinta. Kertaan tällä projektilla kurssin aiheita ja hieman uutta.
-- Asennamme ja konfiguroimme molemmille minioneille: Käyttöjärjestelmän-Linux, Web-serverin-Nginx,Ohjelmointikielen-Python sekä Tietokannan-MySQL.
+- Asennamme ja konfiguroimme molemmille minioneille: Käyttöjärjestelmän-Linux, Web-serverin-Nginx,Ohjelmointikielen-Python sekä Tietokannan-PostgreSQL.
 
 ## Virtuaalikoneiden tekeminen
 
