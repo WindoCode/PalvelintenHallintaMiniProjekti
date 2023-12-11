@@ -139,8 +139,9 @@ nginx:
 
 ## Loppumietteet projektista ja kurssista
 
-- Opin
-
+- Mun mielestä tässä projektissa sai hyvän kertauksen asioista, mitä käsittelimme kurssillakin. Projektissa olisi voinut tehdä enemmän konfiguraatiota, esim. käyttäjäkonfiguraatioiden kanssa. Annan itselleni arvosanaksi 4/5 tästä projektista
+- Teron luennoima kurssi oli jälleen sellainen, josta jäi eniten käteen konkreettisia taitoja tällä opintojaksolla. (Git, saltstack, skriptausta, vagrant)
+- Itseäni harmittaa, että toteutus oli kokonaan etänä, mutta kurssi silti kokonaisuudessaan oli hyvä. Kurssilla voitaisiin pintapuolisesti tarkistella myös muita konfiguraatiohallintaohjelmia. Kiitos Tero jälleen hyvästä setistä!
 
 
 
