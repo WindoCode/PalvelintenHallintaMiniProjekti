@@ -1,0 +1,5 @@
+base:
+  '*':
+    - postgresql
+    - nginx
+    - python
